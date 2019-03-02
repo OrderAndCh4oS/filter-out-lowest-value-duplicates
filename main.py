@@ -1,4 +1,4 @@
-def filter_out_lowest_values_by_key(iterable, key, value):
+def filter_out_lowest_values(iterable, key, value):
     t_v = {}
     result = []
     for row in iterable:
