@@ -1,15 +1,15 @@
 def filter_out_lowest_values(iterable, key, value):
-    t_v = {}
+    lookup = {}
     result = []
     for row in iterable:
-        if not t_v.get(row[key]):
-            t_v[row[key]] = (row[value], len(result))
+        if not lookup.get(row[key]):
+            lookup[row[key]] = (row[value], len(result))
             result.append(row)
             continue
 
-        if row[value] > t_v[row[key]][0]:
-            t_v[row[key]] = (row[value], t_v[row[key]][1])
-            result[t_v[row[key]][1]] = row
+        if row[value] > lookup[row[key]][0]:
+            lookup[row[key]] = (row[value], lookup[row[key]][1])
+            result[lookup[row[key]][1]] = row
 
     return result
 
