@@ -22,4 +22,4 @@ if __name__ == '__main__':
         {'T': 3456, 'V': 40, 'O': 91}
     ]
 
-    print(filter_out_lowest_values_by_key(arr, 'T', 'V'))
+    print(filter_out_lowest_values(arr, 'T', 'V'))
